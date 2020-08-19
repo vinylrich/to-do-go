@@ -1,6 +1,7 @@
 package rest
 
 import (
+	"github.com/ajtwoddltka/to-do-go/backend/rest"
 	"github.com/gin-gonic/gin"
 )
 
@@ -11,5 +12,7 @@ func RunAPI(address string) {
 			"message": "pong",
 		})
 	})
+	router.GET("/", rest.GetMainPage())
+
 	router.Run(":8000")
 }
