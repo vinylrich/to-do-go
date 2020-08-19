@@ -1,9 +1,6 @@
 package rest
 
 import (
-	"fmt"
-	"log"
-
 	"github.com/gin-gonic/gin"
 )
 
@@ -21,6 +18,5 @@ func GetPing(c *gin.Context) {
 	})
 }
 func GetMainPage(c *gin.Context) {
-	log.Println("Main page....")
-	fmt.Fprintf(c.Writer, "Main page for secure API!!")
+	c.JSON(200, gin.H{"Main": "Page"})
 }
